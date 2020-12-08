@@ -1,0 +1,179 @@
+*{
+  padding:0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #091921;
+  position:relative;
+  transition: all 0.7s ease-in;
+}
+
+.container{
+  box-shadow: 0 0 70px 0 black;
+  border-radius: 100%;
+  position:relative;
+}
+
+.clock{
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+  height: 30vw;
+  background: #091921 url('images/clock.png') no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  border: 10px solid #0f1a1f;
+  box-shadow: inset 0 0 30px 0 black;
+  position:relative;
+}
+
+
+
+.pivot{
+  width: 2vw;
+  height: 2vw;
+  border-radius: 100%;
+  background-color: rgb(188 183 183);
+  align-self: center;
+  box-shadow: 0 0 10px 0 black;
+  z-index: 3;
+}
+
+
+.hour{
+  position: absolute;
+  top: 28%;
+  left: 48.5%;
+  height: 23%;
+  width: 3%;
+  background-color: rgb(122 16 54);
+  border-radius: 25px;
+  transform-origin: bottom;
+}
+.minute{
+
+  position: absolute;
+  top: 18%;
+  left: 48%;
+  height: 32%;
+  width: 2%;
+  background-color: #b5b1b1;
+  border-radius: 25px;
+  transform-origin: bottom;
+
+}
+.second{
+
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  height: 40%;
+  width: 1.4%;
+  background-color: #488aff;
+  border-radius: 25px;
+  transform-origin: 1% 81%;
+
+}
+
+.toggleMode{
+  position: absolute;
+  top: 9%;
+  right: 5%;
+  display: flex;
+  cursor: pointer;
+}
+ h3{
+  color: #867f7f;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+}
+
+.toggleButton{
+  width: 50px;
+  height: 20px;
+  border: 1px solid white;
+  margin-right: 10px;
+  padding: 3px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+}
+.innerCircle{
+  width: 25px;
+  height: 18px;
+  background-color:#867f7f;
+  border-radius: 18px;
+}
+
+
+
+/* ======================light mode properties============= */
+
+.hChange{
+  color: black;
+}
+
+.buttonChange{
+  background-color:black;
+  flex-direction:row-reverse;
+}
+
+.innerChange{
+  background-color: white;
+}
+
+.bodyChange{
+  background-color: white;
+}
+
+.clockChange{
+  background: white url('images/clock.png') no-repeat;
+  background-size: cover;
+  border: 10px solid #7e7e7e;
+  box-shadow: inset 0 0 50px 0 grey;
+}
+
+.containerChange{
+  box-shadow: 0 0 70px 0 grey;
+
+}
+
+@media (max-width: 850px)
+{
+  .clock{
+    width: 50vw;
+    height: 50vw;
+  }
+
+}
+
+@media (max-width: 650px)
+{
+  .clock{
+    width: 60vw;
+    height:60vw;
+  }
+
+  .toggleMode h3{
+    font-size: 15px;
+  }
+
+  .toggleButton{
+    width: 30px;
+    height: 10px;
+  }
+  .innerCircle{
+    width: 16px;
+    height: 12px;
+    background-color:white;
+    border-radius: 18px;
+
+  }
+
+}
